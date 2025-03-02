@@ -203,6 +203,9 @@
   .m-\[6px\] {
     margin: 6px;
   }
+  .my-\[6px\] {
+    margin-block: 6px;
+  }
   .block {
     display: block;
   }
@@ -287,6 +290,9 @@
   .items-end {
     align-items: flex-end;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -295,6 +301,9 @@
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);

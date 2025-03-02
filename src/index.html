@@ -11,6 +11,29 @@
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="output.css" />
     <title>Chatbot</title>
+    <style>
+      @keyframes typing {
+        0% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.3;
+        }
+      }
+
+      .dot:nth-child(1) {
+        animation: typing 1.5s infinite ease-in-out;
+      }
+      .dot:nth-child(2) {
+        animation: typing 1.5s infinite ease-in-out 0.2s;
+      }
+      .dot:nth-child(3) {
+        animation: typing 1.5s infinite ease-in-out 0.4s;
+      }
+    </style>
   </head>
   <body class="bg-purple-300 w-full h-screen flex justify-center items-center">
     <div class="w-[380px] bg-white rounded-2xl h-[550px] flex flex-col">
@@ -45,7 +68,7 @@
           </div>
         </div>
 
-        <div
+        <!-- <div
           class="flex justify-end flex-wrap break-words w-full"
           id="user-message"
         >
@@ -54,9 +77,9 @@
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
-        </div>
+        </div> -->
 
-        <div class="flex gap-2">
+        <!-- <div class="flex gap-2" id="bot-message">
           <div class="flex items-end">
             <i
               class="ri-chat-smile-2-line text-lg bg-purple-600 text-white rounded-full px-2 py-1"
@@ -64,14 +87,14 @@
           </div>
           <div>
             <div
-              class="bg-gray-100 px-4 py-2 rounded-t-xl rounded-br-xl flex gap-1 animate-[fade_1.8s_ease-in-out_infinite]"
+              class="bg-gray-100 px-4 py-3 rounded-t-xl rounded-br-xl flex gap-1 animate-[fade_1.8s_ease-in-out_infinite]"
             >
-              <p class="w-[6px] h-[6px] rounded-full bg-gray-400"></p>
-              <p class="w-[6px] h-[6px] rounded-full bg-gray-400"></p>
-              <p class="w-[6px] h-[6px] rounded-full bg-gray-400"></p>
+              <p class="dot w-[6px] h-[6px] rounded-full bg-gray-400"></p>
+              <p class="dot w-[6px] h-[6px] rounded-full bg-gray-400"></p>
+              <p class="dot w-[6px] h-[6px] rounded-full bg-gray-400"></p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- Chat Input Field (Fixed at Bottom) -->
