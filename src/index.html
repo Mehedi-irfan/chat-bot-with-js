@@ -3,32 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- icon  -->
+    <!-- Remix Icon CDN -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css"
     />
-
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="output.css" />
-    <title>Chat Boat</title>
+    <title>Chatbot</title>
   </head>
   <body class="bg-purple-300 w-full h-screen flex justify-center items-center">
-    <div class="w-1/3 bg-white rounded-2xl">
-      <!-- chat bot header  -->
+    <div class="w-[380px] bg-white rounded-2xl h-[550px] flex flex-col">
+      <!-- Chatbot Header -->
       <div
-        class="bg-purple-600 px-6 py-3 flex justify-between items-center rounded-t-2xl"
+        class="bg-purple-600 px-6 py-4 flex justify-between items-center rounded-t-2xl"
       >
-        <div class="">
+        <div class="space-x-1 flex items-center">
           <i
-            class="ri-chat-smile-2-line bg-white p-1 text-xl text-purple-600 rounded-full"
+            class="ri-chat-smile-2-line bg-white px-1 text-xl text-purple-600 rounded-full"
           ></i>
           <span class="text-xl text-white font-bold">Chatbot</span>
         </div>
         <div>
-          <i class="ri-arrow-down-s-line text-white text-xl"></i>
+          <i class="ri-arrow-down-s-line text-white text-xl cursor-pointer"></i>
         </div>
       </div>
-      <!-- chat bot header  -->
+
+      <!-- Chat Body (Scrollable) -->
+      <div class="flex-1 overflow-y-auto py-4 px-6 space-y-4" id="chat-body">
+        <div class="flex gap-2">
+          <div class="flex items-end">
+            <i
+              class="ri-chat-smile-2-line text-lg bg-purple-600 text-white rounded-full px-2 py-1"
+            ></i>
+          </div>
+          <div>
+            <p class="text-sm bg-gray-100 px-4 py-2 rounded-t-xl rounded-br-xl">
+              Hey there🔥 <br />
+              How can I help you today?
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-end" id="user-message">
+          <p
+            class="text-sm bg-purple-600 text-white px-4 py-2 rounded-t-xl rounded-bl-xl w-3/4"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="flex gap-2">
+          <div class="flex items-end">
+            <i
+              class="ri-chat-smile-2-line text-lg bg-purple-600 text-white rounded-full px-2 py-1"
+            ></i>
+          </div>
+          <div>
+            <div
+              class="bg-gray-100 px-4 py-2 rounded-t-xl rounded-br-xl flex gap-1 animate-[fade_1.8s_ease-in-out_infinite]"
+            >
+              <p class="w-[6px] h-[6px] rounded-full bg-gray-400"></p>
+              <p class="w-[6px] h-[6px] rounded-full bg-gray-400"></p>
+              <p class="w-[6px] h-[6px] rounded-full bg-gray-400"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Field (Fixed at Bottom) -->
+      <div class="p-4 bg-white rounded-b-2xl">
+        <form
+          action=""
+          class="flex items-center border border-gray-300 px-3 py-2 rounded-full focus:border-purple-600"
+          id="chat-form"
+        >
+          <input
+            type="text"
+            class="flex-1 text-sm outline-none px-2"
+            id="message-input"
+            placeholder="Message..."
+            required
+          />
+          <div class="flex gap-2 text-gray-500" id="chat-controls">
+            <i class="ri-emoji-sticker-line text-base cursor-pointer"></i>
+            <i class="ri-attachment-line text-base cursor-pointer"></i>
+            <button type="submit" id="send-message">
+              <i
+                class="ri-arrow-up-line text-sm bg-purple-600 text-white p-2 rounded-full"
+              ></i>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
