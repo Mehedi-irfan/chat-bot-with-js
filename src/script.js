@@ -1,6 +1,7 @@
 const messageInput = document.getElementById("message-input");
 const chatBody = document.getElementById("chat-body");
 const sendMessageBtn = document.getElementById("send-message");
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const userData = {
   message: null,
@@ -12,6 +13,8 @@ const createMessageElement = (content, classes) => {
   div.innerHTML = content;
   return div;
 };
+
+const generateBotReply = () => {};
 
 const handleOutGoingMessage = (e) => {
   e.preventDefault();
@@ -33,7 +36,7 @@ const handleOutGoingMessage = (e) => {
           </div>
           <div>
             <div
-              class="bg-gray-100 px-4 py-3 rounded-t-xl rounded-br-xl flex gap-1 animate-[fade_1.8s_ease-in-out_infinite]"
+              class="bg-gray-100 px-4 py-3 rounded-t-xl rounded-br-xl flex gap-1 animate-[fade_1.8s_ease-in-out_infinite] ml-2"
             >
               <p class="dot w-[6px] h-[6px] rounded-full bg-gray-400"></p>
               <p class="dot w-[6px] h-[6px] rounded-full bg-gray-400"></p>
