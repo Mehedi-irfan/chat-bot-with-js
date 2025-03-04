@@ -1,6 +1,7 @@
 const messageInput = document.getElementById("message-input");
 const chatBody = document.getElementById("chat-body");
 const sendMessageBtn = document.getElementById("send-message");
+const API_KEY = ``;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const userData = {
